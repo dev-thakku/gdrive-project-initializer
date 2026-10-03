@@ -12,7 +12,7 @@ A Google Workspace Add-on for Google Drive that automates project folder scaffol
   - `Agile Sprint` (Sprint Backlog, Design Assets, Dev GUI/Server, QA, Retrospective)
   - `Marketing Campaign` (Brief, Assets, Copywriting, Performance Metrics)
 - **Granular Selection**: Visual tree preview with checkboxes to include/exclude specific subfolders before generation.
-- **Custom Profile Creator**: Create, save, and reuse custom folder structures with multi-line path definitions.
+- **Custom Profile Management**: Create, edit, rename, and delete custom folder structures with multi-line path definitions and auto-expansion of nested paths.
 - **Drive Contextual Integration**: Automatically activates when selecting a folder in Google Drive.
 - **In-Memory Cache**: Prevents duplicate folder creation and Google Drive index latency.
 

@@ -35,7 +35,7 @@ export default [
           ignoreRestSiblings: true,
           // Avoid warning on functions invoked by Apps Script triggers/card actions
           varsIgnorePattern:
-            "^(onHomepage|onItemsSelected|getDefaultTemplates|getUserTemplates|buildMainCard|handleTemplateChange|generateFolders|buildCustomTemplateCard|saveCustomTemplate)",
+            "^(MAX_FOLDER_DEPTH|compareFolderPaths|validateFolderDepth|onHomepage|onItemsSelected|getDefaultTemplates|getUserTemplates|normalizeTemplatePaths|buildMainCard|handleTemplateChange|generateFolders|buildCustomTemplateCard|saveCustomTemplate|buildEditCustomTemplateCard|updateCustomTemplate|deleteCustomTemplate)",
         },
       ],
       "no-undef": "error",

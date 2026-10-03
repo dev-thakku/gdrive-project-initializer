@@ -11,7 +11,7 @@
   "addOns": {
     "common": {
       "name": "Project Initializer V2",
-      "logoUrl": "https://www.gstatic.com/images/icons/material/system/1x/create_new_folder_black_24dp.png",
+      "logoUrl": "https://www.gstatic.com/images/icons/material/system/2x/create_new_folder_grey600_48dp.png",
       "useLocaleFromApp": true,
       "homepageTrigger": {
         "runFunction": "onHomepage"
