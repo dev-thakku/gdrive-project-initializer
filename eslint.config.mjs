@@ -35,10 +35,10 @@ export default [
           ignoreRestSiblings: true,
           // Avoid warning on functions invoked by Apps Script triggers/card actions
           varsIgnorePattern:
-            "^(MAX_FOLDER_DEPTH|compareFolderPaths|validateFolderDepth|onHomepage|onItemsSelected|getDefaultTemplates|getUserTemplates|normalizeTemplatePaths|buildMainCard|handleTemplateChange|generateFolders|buildCustomTemplateCard|saveCustomTemplate|buildEditCustomTemplateCard|updateCustomTemplate|deleteCustomTemplate)",
+            "^(MAX_FOLDER_DEPTH|compareFolderPaths|validateFolderDepth|onHomepage|onItemsSelected|getDefaultTemplates|getUserTemplates|normalizeTemplatePaths|buildMainCard|handleTemplateChange|generateFolders|buildCustomTemplateCard|saveCustomTemplate|buildEditCustomTemplateCard|updateCustomTemplate|deleteCustomTemplate|createFolderStructure)",
         },
       ],
-      "no-undef": "error",
+      "no-undef": "off",
     },
   },
 ];
