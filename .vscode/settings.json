@@ -1,0 +1,21 @@
+{
+  "files.associations": {
+    "*.gs": "javascript"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "javascript.validate.enable": true,
+  "javascript.suggest.completeFunctionCalls": true,
+  "typescript.validate.enable": true,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/.git": true
+  }
+}

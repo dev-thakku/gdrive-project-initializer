@@ -1,0 +1,64 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Clasp: Push Code",
+      "type": "shell",
+      "command": "npm run clasp:push",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Clasp: Watch & Auto-Push",
+      "type": "shell",
+      "command": "npm run clasp:watch",
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Clasp: Pull Remote Code",
+      "type": "shell",
+      "command": "npm run clasp:pull",
+      "problemMatcher": []
+    },
+    {
+      "label": "Clasp: Open Script in Browser",
+      "type": "shell",
+      "command": "npm run clasp:open",
+      "problemMatcher": []
+    },
+    {
+      "label": "Clasp: View Logs",
+      "type": "shell",
+      "command": "npm run clasp:logs",
+      "problemMatcher": []
+    },
+    {
+      "label": "Clasp: Authenticate (Login)",
+      "type": "shell",
+      "command": "npm run clasp:login",
+      "problemMatcher": []
+    },
+    {
+      "label": "Lint Code (ESLint)",
+      "type": "shell",
+      "command": "npm run lint:fix",
+      "problemMatcher": ["$eslint-stylish"]
+    },
+    {
+      "label": "Format Code (Prettier)",
+      "type": "shell",
+      "command": "npm run format",
+      "problemMatcher": []
+    },
+    {
+      "label": "Typecheck Project",
+      "type": "shell",
+      "command": "npm run typecheck",
+      "problemMatcher": ["$tsc"]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+# Ignore all files by default
+**/**
+
+# Keep Apps Script manifest
+!appsscript.json
+
+# Keep Apps Script code and template files
+!*.gs
+!*.js
+!*.html
+!**/*.gs
+!**/*.js
+!**/*.html

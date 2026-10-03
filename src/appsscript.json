@@ -1,0 +1,29 @@
+{
+  "timeZone": "Asia/Kolkata",
+  "dependencies": {},
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8",
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/drive",
+    "https://www.googleapis.com/auth/drive.addons.metadata.readonly",
+    "https://www.googleapis.com/auth/script.locale"
+  ],
+  "addOns": {
+    "common": {
+      "name": "Project Initializer V2",
+      "logoUrl": "https://www.gstatic.com/images/icons/material/system/1x/create_new_folder_black_24dp.png",
+      "useLocaleFromApp": true,
+      "homepageTrigger": {
+        "runFunction": "onHomepage"
+      }
+    },
+    "drive": {
+      "homepageTrigger": {
+        "runFunction": "onHomepage"
+      },
+      "onItemsSelectedTrigger": {
+        "runFunction": "onItemsSelected"
+      }
+    }
+  }
+}

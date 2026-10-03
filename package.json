@@ -1,0 +1,41 @@
+{
+  "name": "drive-project-initializer",
+  "version": "1.0.0",
+  "description": "Google Drive Add-on to initialize structured project folder hierarchies from templates",
+  "private": true,
+  "scripts": {
+    "clasp:login": "clasp login",
+    "clasp:logout": "clasp logout",
+    "clasp:create": "clasp create --rootDir ./src",
+    "clasp:clone": "clasp clone",
+    "clasp:pull": "clasp pull",
+    "clasp:push": "clasp push",
+    "clasp:watch": "clasp push --watch",
+    "clasp:status": "clasp status",
+    "clasp:open": "clasp open",
+    "clasp:deploy": "clasp deploy",
+    "clasp:version": "clasp version",
+    "clasp:logs": "clasp logs",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@google/clasp": "^2.4.2",
+    "@types/google-apps-script": "^1.0.83",
+    "eslint": "^9.20.0",
+    "globals": "^15.14.0",
+    "prettier": "^3.5.0",
+    "typescript": "^5.7.0"
+  },
+  "keywords": [
+    "google-apps-script",
+    "drive-add-on",
+    "clasp",
+    "workspace-addon"
+  ],
+  "author": "",
+  "license": "UNLICENSED"
+}
