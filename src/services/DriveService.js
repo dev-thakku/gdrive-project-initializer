@@ -9,7 +9,7 @@
 function createFolderStructure(rootFolder, paths) {
   var rootId = rootFolder.getId();
   var folderCache = {
-    "root": rootId,
+    root: rootId,
   };
   var createdFolderIds = [];
   var createdCount = 0;
@@ -30,12 +30,17 @@ function createFolderStructure(rootFolder, paths) {
         } else {
           // 2. Query Google Drive API v3 to see if it exists
           // Drive API v3 uses 'name' instead of 'title' for queries
-          var query = "mimeType='application/vnd.google-apps.folder' and trashed=false and name='" + folderName.replace(/'/g, "\\'") + "' and '" + currentParentId + "' in parents";
-          
+          var query =
+            "mimeType='application/vnd.google-apps.folder' and trashed=false and name='" +
+            folderName.replace(/'/g, "\\'") +
+            "' and '" +
+            currentParentId +
+            "' in parents";
+
           var searchResult = Drive.Files.list({
             q: query,
             fields: "files(id, name)",
-            pageSize: 1
+            pageSize: 1,
           });
 
           if (searchResult.files && searchResult.files.length > 0) {
@@ -44,8 +49,8 @@ function createFolderStructure(rootFolder, paths) {
             // Create new folder via Advanced Service
             var newFolder = Drive.Files.create({
               name: folderName,
-              mimeType: 'application/vnd.google-apps.folder',
-              parents: [currentParentId]
+              mimeType: "application/vnd.google-apps.folder",
+              parents: [currentParentId],
             });
             currentParentId = newFolder.id;
             createdFolderIds.push(currentParentId);
@@ -59,7 +64,6 @@ function createFolderStructure(rootFolder, paths) {
     });
 
     return createdCount;
-
   } catch (error) {
     // Atomic Rollback: Delete any created folders
     for (var i = createdFolderIds.length - 1; i >= 0; i--) {
@@ -69,6 +73,9 @@ function createFolderStructure(rootFolder, paths) {
         // Ignore deletion errors during rollback to try and delete as many as possible
       }
     }
-    throw new Error("Folder creation failed and changes were rolled back. Original error: " + error.message);
+    throw new Error(
+      "Folder creation failed and changes were rolled back. Original error: " +
+        error.message,
+    );
   }
 }

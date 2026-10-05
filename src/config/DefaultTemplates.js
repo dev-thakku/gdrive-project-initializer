@@ -37,5 +37,5 @@ var DEFAULT_TEMPLATES_JSON = {
     "02_Assets/Video",
     "03_Copywriting",
     "04_Performance_Metrics",
-  ]
+  ],
 };

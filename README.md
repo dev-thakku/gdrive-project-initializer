@@ -7,6 +7,9 @@ A Google Workspace Add-on for Google Drive that automates project folder scaffol
 ## 🚀 Features
 
 - **Folder Hierarchy Automation**: Generates complex multi-tier folder structures in Google Drive in one click.
+- **High Performance**: Uses Advanced Drive Service (Drive API v3) for faster folder creation.
+- **Atomic Rollback**: Safely deletes partially created structures if execution fails or times out.
+- **JSON Configuration**: Decoupled, modular JSON-based template definitions ready for external APIs.
 - **Built-in Templates**:
   - `SDLC Standard` (Plan, Requirements, Specs, Designs, Source Code, Test, Release, etc.)
   - `Agile Sprint` (Sprint Backlog, Design Assets, Dev GUI/Server, QA, Retrospective)
@@ -97,7 +100,7 @@ You can run these via terminal or through the IDE Task Runner (**Cmd+Shift+P** -
 
 ## 📁 Project Structure
 
-```
+```text
 ├── .clasp.json              # Clasp project configuration (scriptId, rootDir)
 ├── .claspignore            # Defines files to exclude from Apps Script push
 ├── .gitignore              # Ignores credentials, node_modules, and cache
@@ -110,8 +113,13 @@ You can run these via terminal or through the IDE Task Runner (**Cmd+Shift+P** -
 │   ├── settings.json       # Editor formatting, language associations & linter settings
 │   └── tasks.json          # Preconfigured one-click IDE tasks (Push, Pull, Watch, Open)
 └── src/
-    ├── appsscript.json     # Manifest file (scopes, Drive add-on triggers, V8 runtime)
-    └── Code.gs (or Code.js)# Core business logic & CardService UI components
+    ├── appsscript.json     # Manifest file
+    ├── config/             # Constants and JSON-based template configurations
+    ├── controllers/        # Action and Trigger handlers
+    ├── services/           # Core business logic (Drive Advanced Services, Templates)
+    ├── ui/                 # CardService UI component builders
+    ├── utils/              # Helper utilities
+    └── Code.js             # Add-on entry point
 ```
 
 ---
